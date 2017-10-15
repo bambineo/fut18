@@ -13,7 +13,7 @@ body {
 .v-header {
   height: 100vh;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   color: #ffffff;
 }
 
@@ -21,7 +21,7 @@ body {
   max-width: 960px;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin: auto;
+  margin-top: 20px;
   text-align: center;
 }
 
