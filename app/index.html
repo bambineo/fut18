@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="app.css" />
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="phone-list.component.js"></script>
+</head>
+
+<body>
+  <header class="v-header container">
+    <div class="fullscreen-video-wrap">
+      <video src="./video/hd0198.mov" autoplay="true" loop="true"></video>
+    </div>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <h1>
+        Welcome to FUT 18 Stats
+      </h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio repellendus laboriosam illum veniam sint dolore
+        quis minus iusto impedit.</p>
+      <a href="#" class="btn">Read more</a>
+    </div>
+  </header>
+  <!-- Use a custom component to render a list of phones -->
+  <!-- <phone-list></phone-list> -->
+
+  <section class="section section-a">
+    <div class="container">
+      <phone-list></phone-list>
+    </div>
+
+  </section>
+
+</body>
+
+</html>
