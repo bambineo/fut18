@@ -1,0 +1,18 @@
+<form class="form">
+    <div class="form-group">
+        <label for="type">Type:</label>
+        <input type="text" class="form-control" id="type" ng-model="match.type">
+    </div>
+    <div class="form-group">
+        <label for="team">Team</label>
+        <input type="text" class="form-control" id="team" ng-model="match.team">
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="saveForm()">Save</button>
+</form>
+<div class="spacer25"></div>
+<table class="table">
+    <tr ng-repeat="match in $ctrl.matches">
+        <td>{{match.type}}</td>
+        <td>{{match.team}}</td>
+    </tr>
+</table>
