@@ -8,26 +8,16 @@ angular.
     controller: function MatchListController($scope) {
       var ml = this;
       $scope.match = {};
-      this.matches = [
-        {
-          type: 'Liga Online',
-          team: 'Schland'
-        },
-        {
-          type: 'Liga Online',
-          team: 'La Liga'
-        }
-      ];
+      this.matches = [];
 
       $scope.saveForm = function() {
         
         var newMatch = angular.copy($scope.match);
         console.log(newMatch);
         ml.matches.push(newMatch);
+        $scope.match = {};
         
       }
-
-      console.log($scope);
 
     }
   });

@@ -1,11 +1,49 @@
 <form class="form">
     <div class="form-group">
         <label for="type">Type:</label>
-        <input type="text" class="form-control" id="type" ng-model="match.type">
-    </div>
-    <div class="form-group">
-        <label for="team">Team</label>
-        <input type="text" class="form-control" id="team" ng-model="match.team">
+        <select class="form-control" id="type" ng-model="match.type">
+            <option value="Liga Offline">Liga Offline</option>
+            <option value="Liga Online">Liga Online</option>
+            <option value="Squad Battle">Squad Battle</option>
+        </select>
+        <label for="team">Team:</label>
+        <select class="form-control" id="team" ng-model="match.team">
+            <option value="La Liga">La Liga</option>
+            <option value="Schland">Schland</option>
+            <option value="Quicksellers">Quicksellers</option>
+        </select>
+        <div class="row">
+            <div class="col-lg-offset-5 col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="button">+</button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Goals For" aria-label="Result" ng-model="goalsfor">                    :
+                    <input type="text" class="form-control" placeholder="Goals Against" aria-label="Result" ng-model="goalsagainst">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="button">+</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="input-group">
+                    <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Go!</button>
+      </span>
+                    <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+                    <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Go!</button>
+      </span>
+                </div>
+            </div>
+        </div>
     </div>
     <button type="submit" class="btn btn-primary" ng-click="saveForm()">Save</button>
 </form>
