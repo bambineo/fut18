@@ -23,11 +23,11 @@
             <div class="col col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                        <button class="btn btn-primary" type="button" ng-click="decrementGoals(match.goalsfor, 'goalsfor')"><span class="glyphicon glyphicon-minus"></span></button>
                     </span>
                     <input type="text" class="form-control" placeholder="Goals For" aria-label="Goals For" ng-model="match.goalsfor">
                     <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                        <button class="btn btn-primary" type="button" ng-click="incrementGoals(match.goalsfor, 'goalsfor')"><span class="glyphicon glyphicon-plus"></span></button>
                     </span>
                 </div>
             </div>
@@ -35,11 +35,11 @@
             <div class="col col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                        <button class="btn btn-primary" type="button" ng-click="decrementGoals(match.goalsagainst, 'goalsagainst')"><span class="glyphicon glyphicon-minus"></span></button>
                     </span>
                     <input type="text" class="form-control" placeholder="Goals Against" aria-label="Goals Against" ng-model="match.goalsagainst">
                     <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button" ng-click="++match.goalsagainst"><span class="glyphicon glyphicon-plus"></span></button>
+                        <button class="btn btn-primary" type="button" ng-click="incrementGoals(match.goalsagainst, 'goalsagainst')"><span class="glyphicon glyphicon-plus"></span></button>
                     </span>
                 </div>
             </div>
@@ -48,9 +48,17 @@
     <button class="btn-primary btn btn-large" ng-click="saveForm()"><span class="glyphicon glyphicon-save"></span> Save</button>
 </form>
 
+<br>
+
 <table class="table">
+    <tr ng-if="$ctrl.matches.length > 0">
+        <th>Typ</th>
+        <th>Team</th>
+        <th>Ergebnis</th>
+    </tr>
     <tr ng-repeat="match in $ctrl.matches">
         <td>{{match.type}}</td>
         <td>{{match.team}}</td>
+        <td>{{match.goalsfor}}:{{match.goalsagainst}}
     </tr>
 </table>

@@ -98,3 +98,7 @@ body {
 input {
   text-align: center;
 }
+
+td {
+  text-align: left;
+}
