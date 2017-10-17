@@ -5,13 +5,16 @@ angular.
   module('futApp').
   component('matchList', {
     templateUrl: 'match-list.component.html',
-    controller: function MatchListController($scope) {
+    controller: function MatchListController($scope, angularServices) {
       var ml = this;
+
+      
+
       $scope.match = {
         goalsfor: 0,
         goalsagainst: 0
       };
-      this.matches = [];
+      this.matches = angularServices.getMatches();
 
       $scope.saveForm = function() {
         
@@ -28,10 +31,10 @@ angular.
       $scope.incrementGoals = function(goals, target) {
         switch (target) {
           case 'goalsfor': 
-            $scope.match.goalsfor = goals+1;
+            $scope.match.goalsfor = goals+=1;
             break;
           case 'goalsagainst':
-            $scope.match.goalsagainst = goals+1;
+            $scope.match.goalsagainst = goals+=1;
             break;
         }
       }

@@ -1,0 +1,14 @@
+[
+  {
+  "team": "Schland",
+  "type": "Liga Offline",
+  "goalsfor": 5,
+  "goalsagainst": 2
+  },
+  {
+  "team": "Schland",
+  "type": "Liga Online",
+  "goalsfor": 2,
+  "goalsagainst": 3
+  }
+]
