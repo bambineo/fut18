@@ -2,8 +2,8 @@ var app = angular.module('futApp', []);
 
 
 app.service('angularServices', function ($http) {
-    apiKey = '';
-    apiUrl = '';
+    var apiKey = '';
+    var apiUrl = 'http://localhost:3000';
 
 
     var service = {
@@ -21,7 +21,7 @@ app.service('angularServices', function ($http) {
     }
 
     function getMatches() {
-        return $http.get("matches.json")
+        return $http.get(apiUrl + "/matches")
             .success(function (data) {
                 service.matches = data;
             });
