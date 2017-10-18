@@ -12,10 +12,25 @@ app.service('angularServices', function ($http) {
     };
     return service;
 
+    function getMatch(id) {
+        return $http.get("")
+            .success(function(data) {
+                
+            }
+        )
+    }
+
     function getMatches() {
         return $http.get("matches.json")
             .success(function (data) {
                 service.matches = data;
+            });
+    }
+
+    function saveMatch() {
+        return $http.post("")
+            .success(function (data) {
+
             });
     }
 
