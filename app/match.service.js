@@ -14,10 +14,10 @@ app.service('angularServices', function ($http) {
 
     function getMatch(id) {
         return $http.get("")
-            .success(function(data) {
-                
+            .success(function (data) {
+
             }
-        )
+            )
     }
 
     function getMatches() {
@@ -27,8 +27,13 @@ app.service('angularServices', function ($http) {
             });
     }
 
-    function saveMatch() {
-        return $http.post("")
+    function saveMatch(match) {
+        var config = {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+            }
+        }
+        return $http.post(apiUrl + "/match", match, config)
             .success(function (data) {
 
             });
